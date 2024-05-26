@@ -2755,25 +2755,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/dasontiovino/.nuget/packages/": {}
+    "C:\\Users\\ariya\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/hotel-backend.csproj",
+      "projectUniqueName": "D:\\Pradita\\genap\\sistem-basis-data\\webapi-backend\\hotel-backend.csproj",
       "projectName": "hotel-backend",
-      "projectPath": "/Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/hotel-backend.csproj",
-      "packagesPath": "/Users/dasontiovino/.nuget/packages/",
-      "outputPath": "/Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/obj/",
+      "projectPath": "D:\\Pradita\\genap\\sistem-basis-data\\webapi-backend\\hotel-backend.csproj",
+      "packagesPath": "C:\\Users\\ariya\\.nuget\\packages\\",
+      "outputPath": "D:\\Pradita\\genap\\sistem-basis-data\\webapi-backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/dasontiovino/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ariya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2845,7 +2846,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
