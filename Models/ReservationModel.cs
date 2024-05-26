@@ -8,10 +8,10 @@ public class ReservationModel
     [Key]
     public int ReservationId { get; set; }
 
-    [ForeignKey("UserModel")]
+    [Required]
     public int UserId { get; set; }
 
-    [ForeignKey("RoomModel")]
+    [Required]
     public int RoomId { get; set; }
 
     [Required]
@@ -30,6 +30,6 @@ public class ReservationModel
 public enum ReservationStatus
 {
     Reserved,
-    Cancelled,
-    Expired
+    Expired,
+    Cancelled
 }
