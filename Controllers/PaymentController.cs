@@ -1,13 +1,16 @@
 using hotel_management_backend.Data;
 using hotel_management_backend.Models;
 using hotel_management_backend.Utilities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace hotel_management_backend.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class PaymentController : ControllerBase
     {
         private readonly ApplicationDbContext _context;

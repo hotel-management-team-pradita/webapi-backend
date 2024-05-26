@@ -1,6 +1,7 @@
 using hotel_management_backend.Data;
 using hotel_management_backend.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -8,7 +9,7 @@ namespace hotel_management_backend.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-
+[Authorize]
 public class UserController : ControllerBase 
 {
     private readonly ApplicationDbContext _context;
