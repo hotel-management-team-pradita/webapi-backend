@@ -80,7 +80,7 @@ public class UserController : ControllerBase
         return CreatedAtRoute("GetUserById", new { id = user.UserId }, user);
     }
 
-    [HttpPut(Name = "UpdateUser")]
+    [HttpPut("{id}", Name = "UpdateUser")]
     public async Task<IActionResult> Put(int id, [FromBody] UserModel user)
     {
         if (id != user.UserId)
