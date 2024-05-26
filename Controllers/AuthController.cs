@@ -3,6 +3,10 @@ using hotel_management_backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace hotel_management_backend.Controllers;
 
@@ -12,9 +16,12 @@ namespace hotel_management_backend.Controllers;
 public class AuthController : ControllerBase
 {
     private readonly ApplicationDbContext _context;
-    public AuthController(ApplicationDbContext context)
+    private readonly IConfiguration _configuration;
+
+    public AuthController(ApplicationDbContext context, IConfiguration configuration)
     {
         _context = context;
+        _configuration = configuration;
     }
 
     public class AuthPayload 
@@ -44,6 +51,30 @@ public class AuthController : ControllerBase
             return NotFound();
         }
 
-        return Ok(user);
+        var token = GenerateJwtToken(user);
+
+        return Ok(new { token });
+    }
+
+        private string GenerateJwtToken(UserModel user)
+    {
+        var claims = new[]
+        {
+            new Claim(JwtRegisteredClaimNames.Sub, user.Email),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString())
+        };
+
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]));
+        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+        var token = new JwtSecurityToken(
+            issuer: _configuration["Jwt:Issuer"],
+            audience: _configuration["Jwt:Audience"],
+            claims: claims,
+            expires: DateTime.Now.AddMinutes(30),
+            signingCredentials: creds);
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }
