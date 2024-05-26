@@ -103,3 +103,4 @@
 /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/obj/Debug/net8.0/hotel-backend.pdb
 /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/obj/Debug/net8.0/hotel-backend.genruntimeconfig.cache
 /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/obj/Debug/net8.0/ref/hotel-backend.dll
+/Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/obj/Debug/net8.0/hotel-backend.sourcelink.json
