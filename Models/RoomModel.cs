@@ -25,7 +25,7 @@ public class RoomModel
     public string? Image { get; set; }
 
     [ForeignKey("RoomTypeModel")]
-    public int TypeId { get; set; }
+    public int RoomTypeId { get; set; }
 
     [Required]
     public RoomStatus Status { get; set; }
