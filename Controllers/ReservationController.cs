@@ -57,7 +57,7 @@ public class ReservationController : ControllerBase
     }
 
     [HttpPost(Name = "CreateReservation")]
-    public async Task<ActionResult<UserModel>> Post([FromForm] ReservationPayload payload)
+    public async Task<ActionResult<UserModel>> Post([FromBody] ReservationPayload payload)
     {
         if (!ModelState.IsValid)
         {

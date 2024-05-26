@@ -31,7 +31,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost(Name = "Authentication")]
-    public async Task<ActionResult<UserModel>> Post([FromForm] AuthPayload payload)
+    public async Task<ActionResult<UserModel>> Post([FromBody] AuthPayload payload)
     {
         if (!ModelState.IsValid)
         {
