@@ -41,7 +41,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-string connectionString = "Server=localhost;Port=3306;User ID=root;Password=password;Database=oop_uas";
+string connectionString = "Server=localhost;Port=3306;User ID=root;Password=root;Database=oop_uas";
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
@@ -57,6 +57,8 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
+
+app.UseStaticFiles();
 
 // Middleware otentikasi
 app.UseAuthentication();

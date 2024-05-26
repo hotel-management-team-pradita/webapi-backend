@@ -4,7 +4,7 @@ class UploadUtils
 {
     public static async Task<string> UploadImage(IFormFile image, HttpRequest request)
     {
-        var uploads = Path.Combine(Directory.GetCurrentDirectory(), "uploads");
+        var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
         if (!Directory.Exists(uploads))
         {
             Directory.CreateDirectory(uploads);

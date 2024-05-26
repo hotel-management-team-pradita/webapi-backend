@@ -58,6 +58,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPost(Name = "CreateUser")]
+    [AllowAnonymous]
     public async Task<ActionResult<UserModel>> Post([FromForm] UserPayload payload)
     {
         if (!ModelState.IsValid)

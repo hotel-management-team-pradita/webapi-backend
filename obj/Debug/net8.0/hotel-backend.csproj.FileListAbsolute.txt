@@ -218,3 +218,4 @@ D:/Pradita/genap/sistem-basis-data/webapi-backend/obj/Debug/net8.0/ref/hotel-bac
 /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/bin/Debug/net8.0/hotel-backend.staticwebassets.runtime.json

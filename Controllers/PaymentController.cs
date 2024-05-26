@@ -47,7 +47,7 @@ namespace hotel_management_backend.Controllers
         {
             public int ReservationId { get; set; }
             public int Discount { get; set; }
-            public int TotalPrice { get; set; }
+            // public int TotalPrice { get; set; }
             public DateTime PaymentDate { get; set; }
         }
 
@@ -72,10 +72,12 @@ namespace hotel_management_backend.Controllers
                 return BadRequest("Reservation cannot be invalid");
             }
 
+            var TotalPrice = reservation.TotalPrice - (reservation.TotalPrice * payload.Discount);
+
             var payment = new PaymentModel()
             {
                 Discount = payload.Discount,
-                TotalPrice = payload.TotalPrice,
+                TotalPrice = Decimal.Parse(TotalPrice.ToString()),
                 PaymentDate = payload.PaymentDate,
                 Reservation = reservation,
             };
