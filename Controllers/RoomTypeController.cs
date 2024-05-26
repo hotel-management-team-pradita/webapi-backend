@@ -79,7 +79,7 @@ namespace hotel_management_backend.Controllers
 
             if (payload.Image != null)
             {
-                var pathname = await UploadUtils.UploadImage(payload.Image);
+                var pathname = await UploadUtils.UploadImage(payload.Image, Request);
                 roomType.Image = pathname;
             }
 
@@ -105,7 +105,7 @@ namespace hotel_management_backend.Controllers
             }
             if (payload.Image != null)
             {
-                var pathname = await UploadUtils.UploadImage(payload.Image);
+                var pathname = await UploadUtils.UploadImage(payload.Image, Request);
                 roomType.Image = pathname;
             }
 

@@ -78,7 +78,7 @@ public class RoomController : ControllerBase
 
         if (payload.Image != null)
         {
-            var pathname = await UploadUtils.UploadImage(payload.Image);
+            var pathname = await UploadUtils.UploadImage(payload.Image, Request);
             room.Image = pathname;
         }
 
@@ -105,7 +105,7 @@ public class RoomController : ControllerBase
 
         if (payload.Image != null)
         {
-            var pathname = await UploadUtils.UploadImage(payload.Image);
+            var pathname = await UploadUtils.UploadImage(payload.Image, Request);
             room.Image = pathname;
         }
 

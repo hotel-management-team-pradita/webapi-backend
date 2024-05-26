@@ -39,7 +39,6 @@ namespace hotel_management_backend.Data
             {
                 entity.HasKey(e => e.PaymentId);
 
-                // other configurations for PaymentModel if necessary
             });
 
             // Configure RoomModel
@@ -51,22 +50,19 @@ namespace hotel_management_backend.Data
                       .WithMany(rt => rt.Rooms)
                       .HasForeignKey(r => r.RoomTypeId)
                       .OnDelete(DeleteBehavior.Cascade);
-
-                // other configurations for RoomModel if necessary
             });
 
             // Configure RoomTypeModel
             modelBuilder.Entity<RoomTypeModel>(entity =>
             {
                 entity.HasKey(e => e.TypeId);
-                // other configurations for RoomTypeModel if necessary
+                entity.HasMany(r => r.Rooms);
             });
 
             // Configure UserModel
             modelBuilder.Entity<UserModel>(entity =>
             {
                 entity.HasKey(e => e.UserId);
-                // other configurations for UserModel if necessary
             });
         }
     }
