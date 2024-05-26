@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Pradita\\genap\\sistem-basis-data\\webapi-backend\\hotel-backend.csproj": {}
+    "/Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/hotel-backend.csproj": {}
   },
   "projects": {
-    "D:\\Pradita\\genap\\sistem-basis-data\\webapi-backend\\hotel-backend.csproj": {
+    "/Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/hotel-backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pradita\\genap\\sistem-basis-data\\webapi-backend\\hotel-backend.csproj",
+        "projectUniqueName": "/Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/hotel-backend.csproj",
         "projectName": "hotel-backend",
-        "projectPath": "D:\\Pradita\\genap\\sistem-basis-data\\webapi-backend\\hotel-backend.csproj",
-        "packagesPath": "C:\\Users\\ariya\\.nuget\\packages\\",
-        "outputPath": "D:\\Pradita\\genap\\sistem-basis-data\\webapi-backend\\obj\\",
+        "projectPath": "/Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/hotel-backend.csproj",
+        "packagesPath": "/Users/dasontiovino/.nuget/packages/",
+        "outputPath": "/Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ariya\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/dasontiovino/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -93,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
