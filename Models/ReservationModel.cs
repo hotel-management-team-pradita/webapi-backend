@@ -18,13 +18,17 @@ public class ReservationModel
     public double TotalPrice { get; set; }
 
     [Required]
-    public string StartDate { get; set; }
+    public DateTime StartDate { get; set; }
 
     [Required]
-    public string EndDate { get; set; }
+    public DateTime EndDate { get; set; }
 
     [Required]
     public ReservationStatus Status { get; set; }
+
+    public virtual RoomModel Room { get; set; }
+
+    public virtual PaymentModel Payment { get; set; }
 }
 
 public enum ReservationStatus

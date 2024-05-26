@@ -18,5 +18,5 @@ public class RoomTypeModel
     [StringLength(255)]
     public string? Image { get; set; }
 
-    public List<RoomModel>? Rooms { get; set; }
+    public virtual List<RoomModel>? Rooms { get; set; }
 }

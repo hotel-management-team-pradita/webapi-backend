@@ -57,6 +57,10 @@ public class RoomController : ControllerBase
     [HttpPost(Name = "CreateRoom")]
     public async Task<ActionResult<RoomModel>> Post([FromForm] RoomModelPayload payload)
     {
+        if (payload == null)
+        {
+            return BadRequest("Payload cannot be null");
+        }
         if (!ModelState.IsValid)
         {
             return UnprocessableEntity(ModelState);
@@ -92,6 +96,11 @@ public class RoomController : ControllerBase
         if (room == null)
         {
             return NotFound();
+        }
+
+        if (payload == null)
+        {
+            return BadRequest("Payload cannot be null");
         }
 
         if (payload.Image != null)

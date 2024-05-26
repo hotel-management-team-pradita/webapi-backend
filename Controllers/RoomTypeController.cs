@@ -61,6 +61,10 @@ namespace hotel_management_backend.Controllers
         [HttpPost(Name = "CreateRoomType")]
         public async Task<ActionResult<RoomTypeModel>> Post([FromForm] RoomTypeModelPayload payload)
         {
+            if (payload == null)
+            {
+                return BadRequest("Payload cannot be null");
+            }
             if (!ModelState.IsValid)
             {
                 return UnprocessableEntity(ModelState);
@@ -95,6 +99,10 @@ namespace hotel_management_backend.Controllers
                 return NotFound();
             }
 
+            if (payload == null)
+            {
+                return BadRequest("Payload cannot be null");
+            }
             if (payload.Image != null)
             {
                 var pathname = await UploadUtils.UploadImage(payload.Image);

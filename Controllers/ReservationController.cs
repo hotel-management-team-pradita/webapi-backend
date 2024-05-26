@@ -46,13 +46,13 @@ public class ReservationController : ControllerBase
         return Ok(reservation);
     }
 
-    public class ReservationPayload 
+    public class ReservationPayload
     {
         public int UserId { get; set; }
-        public int RoomId { get; set;}
+        public int RoomId { get; set; }
         public double TotalPrice { get; set; }
         public string StartDate { get; set; }
-        public string EndDate { get; set;}
+        public string EndDate { get; set; }
     }
 
     [HttpPost(Name = "CreateReservation")]
@@ -68,8 +68,8 @@ public class ReservationController : ControllerBase
             UserId = payload.UserId,
             RoomId = payload.RoomId,
             TotalPrice = payload.TotalPrice,
-            StartDate = payload.StartDate,
-            EndDate = payload.EndDate,
+            StartDate = DateTime.Parse(payload.StartDate),
+            EndDate = DateTime.Parse(payload.EndDate),
             Status = 0
         };
 
@@ -79,7 +79,7 @@ public class ReservationController : ControllerBase
         return CreatedAtRoute("GetUserById", new { id = reservation.ReservationId }, reservation);
     }
 
-    public class UpdateReservationPayload 
+    public class UpdateReservationPayload
     {
         public ReservationStatus Status { get; set; }
     }
