@@ -24,14 +24,14 @@ public class AuthController : ControllerBase
         _configuration = configuration;
     }
 
-    public class AuthPayload 
+    public class AuthPayload
     {
         public string Email { get; set; }
         public string Password { get; set; }
     }
 
     [HttpPost(Name = "Authentication")]
-    public async Task<ActionResult<UserModel>> Post([FromBody] AuthPayload payload)
+    public async Task<ActionResult<UserModel>> Post([FromForm] AuthPayload payload)
     {
         if (!ModelState.IsValid)
         {
@@ -56,7 +56,7 @@ public class AuthController : ControllerBase
         return Ok(new { token });
     }
 
-        private string GenerateJwtToken(UserModel user)
+    private string GenerateJwtToken(UserModel user)
     {
         var claims = new[]
         {

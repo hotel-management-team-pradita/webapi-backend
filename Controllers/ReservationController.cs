@@ -57,7 +57,7 @@ public class ReservationController : ControllerBase
     }
 
     [HttpPost(Name = "CreateReservation")]
-    public async Task<ActionResult<UserModel>> Post([FromBody] ReservationPayload payload)
+    public async Task<ActionResult<UserModel>> Post([FromForm] ReservationPayload payload)
     {
         if (!ModelState.IsValid)
         {
@@ -86,7 +86,7 @@ public class ReservationController : ControllerBase
     }
 
     [HttpPut("{id}", Name = "UpdateReservation")]
-    public async Task<IActionResult> Put(int id, [FromBody] UpdateReservationPayload payload)
+    public async Task<IActionResult> Put(int id, [FromForm] UpdateReservationPayload payload)
     {
         if (!ModelState.IsValid)
         {

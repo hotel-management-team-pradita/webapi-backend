@@ -10,7 +10,7 @@ namespace hotel_management_backend.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 [Authorize]
-public class UserController : ControllerBase 
+public class UserController : ControllerBase
 {
     private readonly ApplicationDbContext _context;
     public UserController(ApplicationDbContext context)
@@ -82,7 +82,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPut("{id}", Name = "UpdateUser")]
-    public async Task<IActionResult> Put(int id, [FromBody] UserModel user)
+    public async Task<IActionResult> Put(int id, [FromForm] UserModel user)
     {
         if (id != user.UserId)
         {
