@@ -1,4 +1,5 @@
-# Ignore project file
+/bin/
+/obj/# Ignore project file
 *.csproj
 
 # Ignore build outputs
