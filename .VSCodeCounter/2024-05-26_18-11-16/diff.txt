@@ -1,0 +1,36 @@
+Date : 2024-05-26 18:11:16
+Directory : /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend
+Total : 8 files,  381 codes, 15 comments, 113 blanks, all 509 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C#       |          8 |        381 |         15 |        113 |        509 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                     | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                        |          8 |        381 |         15 |        113 |        509 |
+| Controllers                                                                                                                              |          1 |          5 |          0 |          1 |          6 |
+| Data                                                                                                                                     |          1 |         32 |         10 |         12 |         54 |
+| Migrations                                                                                                                               |          3 |        345 |          5 |         95 |        445 |
+| Models                                                                                                                                   |          3 |         -1 |          0 |          5 |          4 |
++------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                                                 | language | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/Controllers/PaymentController.cs                  | C#       |          5 |          0 |          1 |          6 |
+| /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/Data/ApplicationDbContext.cs                      | C#       |         32 |         10 |         12 |         54 |
+| /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/Migrations/20240526111012_UpdateModel.Designer.cs | C#       |        180 |          2 |         61 |        243 |
+| /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/Migrations/20240526111012_UpdateModel.cs          | C#       |        124 |          3 |         20 |        147 |
+| /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/Migrations/ApplicationDbContextModelSnapshot.cs   | C#       |         41 |          0 |         14 |         55 |
+| /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/Models/PaymentModel.cs                            | C#       |         -2 |          0 |         -2 |         -4 |
+| /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/Models/ReservationModel.cs                        | C#       |          2 |          0 |          2 |          4 |
+| /Users/dasontiovino/Documents/University/PemogramanBerorientasiObjek/UAS/hotel-backend/Models/RoomModel.cs                               | C#       |         -1 |          0 |          5 |          4 |
+| Total                                                                                                                                    |          |        381 |         15 |        113 |        509 |
++------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
