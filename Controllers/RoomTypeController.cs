@@ -8,12 +8,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using hotel_management_backend.Utilities;
 
 namespace hotel_management_backend.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class RoomTypeController : ControllerBase
     {
         private readonly ApplicationDbContext _context;

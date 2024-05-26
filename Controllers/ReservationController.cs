@@ -3,12 +3,13 @@ using hotel_management_backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.AspNetCore.Authorization;
 
 namespace hotel_management_backend.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-
+[Authorize]
 public class ReservationController : ControllerBase
 {
     private readonly ApplicationDbContext _context;
