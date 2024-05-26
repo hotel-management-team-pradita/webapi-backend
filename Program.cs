@@ -15,6 +15,15 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost",
+        builder => builder.WithOrigins("http://localhost:8000") // Adjust the port number as necessary
+                          .AllowAnyHeader()
+                          .AllowAnyMethod());
+});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,7 +35,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Uncomment the following line to enable attribute routing
 app.MapControllers();
+
+app.UseCors("AllowLocalhost");
 
 app.Run();
