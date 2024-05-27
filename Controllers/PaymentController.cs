@@ -76,10 +76,10 @@ namespace hotel_management_backend.Controllers
 
             var payment = new PaymentModel()
             {
+                ReservationId = payload.ReservationId,
                 Discount = payload.Discount,
                 TotalPrice = Decimal.Parse(TotalPrice.ToString()),
                 PaymentDate = payload.PaymentDate,
-                Reservation = reservation,
             };
 
             _context.Payments.Add(payment);

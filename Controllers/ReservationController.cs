@@ -64,11 +64,18 @@ public class ReservationController : ControllerBase
             return UnprocessableEntity(ModelState);
         }
 
+        var startDate = DateTime.Parse(payload.StartDate);
+        var endDate = DateTime.Parse(payload.EndDate);
+
+        var room = await _context.Rooms.FindAsync(payload.RoomId);
+        TimeSpan difference = endDate - startDate;
+        int dayDifference = difference.Days;
+
         var reservation = new ReservationModel()
         {
             UserId = payload.UserId,
             RoomId = payload.RoomId,
-            TotalPrice = payload.TotalPrice,
+            TotalPrice = dayDifference * room.Price,
             StartDate = DateTime.Parse(payload.StartDate),
             EndDate = DateTime.Parse(payload.EndDate),
             Status = 0
@@ -83,6 +90,10 @@ public class ReservationController : ControllerBase
     public class UpdateReservationPayload
     {
         public ReservationStatus Status { get; set; }
+        public int UserId { get; set; }
+        public int RoomId { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
     }
 
     [HttpPut("{id}", Name = "UpdateReservation")]
@@ -98,6 +109,14 @@ public class ReservationController : ControllerBase
         {
             return NotFound();
         }
+
+        reservation.StartDate = DateTime.Parse(payload.StartDate);
+        reservation.EndDate = DateTime.Parse(payload.EndDate);
+
+        var room = await _context.Rooms.FindAsync(reservation.RoomId);
+        TimeSpan difference = reservation.EndDate - reservation.StartDate;
+        int dayDifference = difference.Days;
+        reservation.TotalPrice = dayDifference * room.Price;
 
         reservation.Status = payload.Status;
 

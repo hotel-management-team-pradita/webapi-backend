@@ -48,6 +48,7 @@ public class RoomController : ControllerBase
     {
         public IFormFile? Image { get; set; }
         public string Name { get; set; }
+        public string? Location { get; set; }
         public string? Description { get; set; }
         public int Price { get; set; }
         public int Quantity { get; set; }
@@ -72,6 +73,7 @@ public class RoomController : ControllerBase
         var room = new RoomModel
         {
             Name = payload.Name,
+            Location = payload.Location,
             Description = payload.Description,
             Quantity = payload.Quantity,
             Price = payload.Price,
@@ -113,6 +115,7 @@ public class RoomController : ControllerBase
         }
 
         room.Name = payload.Name;
+        room.Location = payload.Location;
         room.Description = payload.Description;
         room.Quantity = payload.Quantity;
         room.Price = payload.Price;

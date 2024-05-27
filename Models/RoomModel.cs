@@ -9,7 +9,11 @@ public class RoomModel
     [StringLength(100)]
     public required string Name { get; set; }
 
-    [StringLength(500)]
+    [StringLength(100)]
+    public string? Location { get; set; }
+
+
+    [StringLength(1000)]
     public string? Description { get; set; }
 
     [Required]
